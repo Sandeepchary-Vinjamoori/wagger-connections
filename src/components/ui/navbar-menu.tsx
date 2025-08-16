@@ -109,11 +109,13 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, href, to, className, ...rest }: any) => {
+  const destination = to ?? href ?? "#";
   return (
     <Link
+      to={destination}
       {...rest}
-      className="text-muted-foreground hover:text-foreground transition-colors"
+      className={cn("text-muted-foreground hover:text-foreground transition-colors", className)}
     >
       {children}
     </Link>

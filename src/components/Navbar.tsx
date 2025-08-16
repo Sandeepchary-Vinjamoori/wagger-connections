@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Menu, MenuItem, HoveredLink } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import pawIcon from "@/assets/paw-icon.png";
 
 export default function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
-  const navigate = useNavigate();
 
   return (
     <div className={cn("fixed top-4 inset-x-0 max-w-6xl mx-auto z-50 px-4", className)}>
@@ -60,12 +59,12 @@ export default function Navbar({ className }: { className?: string }) {
           >
             Login
           </Link>
-          <button 
-            onClick={() => navigate("/register")}
+          <Link 
+            to="/register"
             className="bg-gradient-to-r from-warm-gold to-pet-blue text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
           >
             Register Dog
-          </button>
+          </Link>
         </div>
       </Menu>
     </div>

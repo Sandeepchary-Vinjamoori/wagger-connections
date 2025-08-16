@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Search, MessageCircle, Star, CheckCircle, Users, Award, Shield } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { mockDogs } from "@/data/mockDogs";
 import goldenRetriever from "@/assets/dogs/golden-retriever.jpg";
 import husky from "@/assets/dogs/husky.jpg";
@@ -15,7 +15,6 @@ import borderCollie from "@/assets/dogs/border-collie.jpg";
 const dogImages = [goldenRetriever, husky, frenchBulldog, germanShepherd, labrador, borderCollie];
 
 const Index = () => {
-  const navigate = useNavigate();
 
   const featuredDogs = mockDogs.slice(0, 6).map((dog, index) => ({
     ...dog,
@@ -40,20 +39,23 @@ const Index = () => {
               Professional breeding services with complete health records and documentation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                onClick={() => navigate("/register")}
-                className="bg-gradient-to-r from-warm-gold to-pet-blue text-white px-8 py-4 text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Register Your Dog
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-warm-gold text-warm-gold hover:bg-warm-gold hover:text-white px-8 py-4 text-lg transition-all duration-300"
-              >
-                Browse Dogs
-              </Button>
+              <Link to="/register">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-warm-gold to-pet-blue text-white px-8 py-4 text-lg hover:shadow-lg transition-all duration-300"
+                >
+                  Register Your Dog
+                </Button>
+              </Link>
+              <Link to="/browse">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-warm-gold text-warm-gold hover:bg-warm-gold hover:text-white px-8 py-4 text-lg transition-all duration-300"
+                >
+                  Browse Dogs
+                </Button>
+              </Link>
             </div>
             
             {/* Stats */}
