@@ -17,24 +17,48 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Golden primary with blue accents */
+    --primary: 43 96% 56%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 213 94% 68%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 43 23% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 213 94% 68%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 43 23% 90%;
+    --input: 43 23% 96%;
+    --ring: 43 96% 56%;
+
+    /* Custom PawMatch colors */
+    --warm-gold: 43 96% 56%;
+    --warm-gold-light: 43 96% 70%;
+    --warm-gold-dark: 43 96% 45%;
+    --pet-blue: 213 94% 68%;
+    --pet-blue-light: 213 94% 80%;
+    --pet-blue-dark: 213 94% 55%;
+    --cream: 43 47% 97%;
+    --warm-gray: 43 7% 94%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--warm-gold)), hsl(var(--pet-blue)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--warm-gold-light)), hsl(var(--warm-gold)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--cream)), hsl(var(--background)));
+
+    /* Shadows */
+    --shadow-warm: 0 10px 30px -10px hsl(var(--warm-gold) / 0.3);
+    --shadow-pet: 0 10px 30px -10px hsl(var(--pet-blue) / 0.2);
+    --shadow-gentle: 0 4px 20px -4px hsl(var(--warm-gold) / 0.15);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 

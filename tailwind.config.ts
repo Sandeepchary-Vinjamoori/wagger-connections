@@ -52,6 +52,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// PawMatch custom colors
+				'warm-gold': {
+					DEFAULT: 'hsl(var(--warm-gold))',
+					light: 'hsl(var(--warm-gold-light))',
+					dark: 'hsl(var(--warm-gold-dark))'
+				},
+				'pet-blue': {
+					DEFAULT: 'hsl(var(--pet-blue))',
+					light: 'hsl(var(--pet-blue-light))',
+					dark: 'hsl(var(--pet-blue-dark))'
+				},
+				cream: 'hsl(var(--cream))',
+				'warm-gray': 'hsl(var(--warm-gray))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
